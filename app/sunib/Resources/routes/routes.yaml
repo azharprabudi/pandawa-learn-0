@@ -1,0 +1,24 @@
+session:
+    type: resource
+    resource: session
+    path: sessions
+    options:
+        withs:
+            - students
+
+student:
+    type: resource
+    resource: student
+    path: students
+    options:
+        withs:
+            - session
+
+create_session:
+    type: message
+    message: create-session
+    path: sessions/create
+    methods:
+        - post
+    rules:
+        - create_session

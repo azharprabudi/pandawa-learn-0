@@ -1,0 +1,3 @@
+create_session:
+    constraints:
+        name: "required|min:5"
